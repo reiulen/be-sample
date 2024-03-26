@@ -11,7 +11,7 @@ export class AuthService {
   ) {}
   async login(email: string, password: string): Promise<any> {
     const user = await this.usersService.findOne({ email });
-    const isMatch = await bcrypt.compare(password, user.password);
+    const isMatch = await bcrypt.compare(password, user?.password ?? '');
     if (isMatch) {
       const token = await bcrypt.hash(new Date().toString(), 10);
       await this.prisma.$transaction(async (tx) => {
