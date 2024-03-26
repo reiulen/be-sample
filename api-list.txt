@@ -1,0 +1,14 @@
+Login POST http://localhost:3010/api/v1/auth/login
+Logout POST http://localhost:3010/api/v1/auth/logout
+
+User
+Create POST http://localhost:3010/api/v1/users
+
+Company
+List GET http://localhost:3010/api/v1/company
+Create POST http://localhost:3010/api/v1/company
+Find GET http://localhost:3010/api/v1/company/{id}
+Update PUT http://localhost:3010/api/v1/company/{id}
+
+Authorization Bearer
+For Authentication add Bearer {token} in Authorization
